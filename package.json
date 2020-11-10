@@ -1,7 +1,7 @@
 {
   "name": "replace-with-chunk-webpack-plugin",
   "version": "0.0.1",
-  "description": "",
+  "description": "replace with chunk webpack plugin",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -19,6 +19,7 @@
     "/src/"
   ],
   "author": "mantou132",
+  "repository": "https://github.com/mantou132/replace-with-chunk-webpack-plugin",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.15",
@@ -43,5 +44,8 @@
   },
   "lint-staged": {
     "*.ts": "eslint --fix"
+  },
+  "dependencies": {
+    "webpack": "^5.4.0"
   }
 }
