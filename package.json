@@ -1,0 +1,47 @@
+{
+  "name": "replace-with-chunk-webpack-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -watch",
+    "lint": "tsc --noEmit && eslint --ext .ts --fix src/",
+    "test": "jest --coverage",
+    "prepare": "npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "/index.js",
+    "/index.js.map",
+    "/index.d.ts",
+    "/index.d.ts.map",
+    "/lib/",
+    "/src/"
+  ],
+  "author": "mantou132",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.3",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix"
+  }
+}
